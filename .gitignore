@@ -1,0 +1,52 @@
+# Vivado generated directories
+*.cache/
+*.hw/
+*.ioplanning/
+*.ip_user_files/
+*.runs/
+*.sim/
+.Xil/
+
+# Vivado generated files
+*.jou
+*.log
+*.pb
+*.str
+*.wdb
+*.wdf
+*.vds
+*.vdi
+*.dcp
+*.bit
+*.bin
+*.ltx
+*.rpt
+*.rpx
+*.xml.bak
+
+# Simulation and temporary files
+*.tmp
+*.temp
+*.bak
+*.old
+*.orig
+*.rej
+*.vcd
+*.wcfg
+*.lock
+*~
+
+# Office temporary files
+~$*
+
+# Local tool and editor directories
+.claude/
+ppt_workspace/
+
+# Generated utility imports
+boardtest.srcs/utils_1/imports/
+
+# Large local assets not intended for source control
+rars*.jar
+*.pptx
+*.mp4
