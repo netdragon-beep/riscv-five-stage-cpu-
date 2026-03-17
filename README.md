@@ -79,7 +79,11 @@ flowchart LR
 ![PC 运行波形](./pc波形图截图.png)
 *(图：五级流水线 PC 跳转与指令执行波形)*
 
-### 3. 演示视频
+##
+
+https://github.com/user-attachments/assets/c506ee84-ae32-4fea-bd0e-6f081aec6ab9
+
+# 3. 演示视频
 
 ---
 
