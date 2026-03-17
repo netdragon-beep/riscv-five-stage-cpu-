@@ -50,3 +50,4 @@ boardtest.srcs/utils_1/imports/
 rars*.jar
 *.pptx
 *.mp4
+!演示视频.mp4
