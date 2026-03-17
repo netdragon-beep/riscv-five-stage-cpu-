@@ -79,12 +79,21 @@ flowchart LR
 ![PC 运行波形](./pc波形图截图.png)
 *(图：五级流水线 PC 跳转与指令执行波形)*
 
-##
+### 3. 交互式冒泡排序演示
+本项目包含一个与板级外设联动的交互式冒泡排序演示程序：
 
+- 程序文件：`交互式冒泡排序_interactive.asm`
+- 演示内容：通过拨码开关输入数据，在开发板上启动冒泡排序，并用 LED 与数码管反馈输入进度、运行状态和排序结果
+- README 中的视频展示的就是该程序在 SoC 系统上的真实运行效果
 
+交互流程概述：
 
-# 3. 演示视频
+- 使用拨码开关逐个输入待排序数字
+- 使用确认操作锁存输入数据
+- 输入完成后启动排序
+- 通过 LED 和数码管观察排序执行结果
 
+演示视频：
 
 https://github.com/user-attachments/assets/463ceeeb-1554-4734-b3ad-6c3e87362677
 
@@ -101,9 +110,10 @@ boardtest/
 │   ├── constrs_1/new/     # [约束] FPGA 引脚分配 (1.xdc)
 │   └── sim_1/new/         # [仿真] 流水线观察与功能验证
 ├── docs/                  # 实验报告与技术说明
-├── compile_asm.bat        # ⚡ 自动化工具：汇编 -> 机器码转化
-├── 交互式冒泡排序.asm       # 演示程序：经典的排序算法实现
-└── BUG_REPORT_*.md        # 🛠️ 深度调试记录 (推荐阅读，涵盖了复杂的流水线 Bug 分析)
+├── compile_asm.bat        # ⚡ 汇编程序 -> 指令流转换脚本
+├── 交互式冒泡排序_interactive.asm
+│                         # 演示程序：交互式输入 + 冒泡排序 + 板级显示
+└── BUG_REPORT_*.md        # 🛠️ 深度调试记录 (推荐阅读，涵盖复杂流水线 Bug 分析)
 ```
 
 ---
@@ -116,9 +126,12 @@ boardtest/
 
 ### 2. 程序编译与更新
 如果你想运行自己的汇编程序：
-1. 编辑 `交互式冒泡排序_interactive.asm`。
-2. 运行 `compile_asm.bat`，脚本将自动更新 `insData.txt`。
-3. 在 Vivado 中重新综合并生成 Bitstream。
+1. 编辑 `交互式冒泡排序_interactive.asm`，或替换为你自己的汇编程序。
+2. 运行 `compile_asm.bat`，将汇编代码编译为新的 `insData_new.txt`。
+3. 将 `insData_new.txt` 复制到 `boardtest.srcs/sources_1/new/insData.txt`。
+4. 在 Vivado 中重新综合、生成 Bitstream，并下载到开发板。
+
+当前仓库默认的板级演示程序就是交互式冒泡排序。README 中的视频展示的也是这个程序的实际运行过程。
 
 ### 3. 运行仿真
 - 默认仿真顶层模块：`tb_pipeline_view`。
