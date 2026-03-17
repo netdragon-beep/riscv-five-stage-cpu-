@@ -80,11 +80,11 @@ flowchart LR
 *(图：五级流水线 PC 跳转与指令执行波形)*
 
 ### 3. 演示视频
-GitHub README 中更稳妥的做法是使用缩略图跳转到视频文件，而不是依赖内嵌播放器。
+GitHub 仓库内的相对路径 `mp4` 链接会先进入文件页面，因此这里改为直接跳转到 Raw 视频地址。
 
-[![观看演示视频](./pc波形图截图.png)](./演示视频.mp4)
+[![点击观看演示视频](./pc波形图截图.png)](https://raw.githubusercontent.com/netdragon-beep/riscv-five-stage-cpu-/main/%E6%BC%94%E7%A4%BA%E8%A7%86%E9%A2%91.mp4)
 
-也可以直接点击这里观看：[演示视频.mp4](./演示视频.mp4)
+也可以直接点击这里观看：[演示视频.mp4](https://raw.githubusercontent.com/netdragon-beep/riscv-five-stage-cpu-/main/%E6%BC%94%E7%A4%BA%E8%A7%86%E9%A2%91.mp4)
 
 ---
 
